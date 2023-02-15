@@ -324,3 +324,20 @@ def panel_markup_3(_, videoid, chat_id):
         ],
     ]
     return buttons
+
+
+    buttons = [
+        [
+            InlineKeyboardButton(
+                text="ᴀʀᴇᴀ ɢᴀʙᴜᴛ", url=f"https://t.me/Areaa_Gabutt"),
+            InlineKeyboardButton(
+                text="ᴘᴜʙʟɪᴋ ᴠɪʀᴛᴜᴀʟ" url=f"https://t.me/Publik_Virtual"),
+        ],
+        [
+            InlineKeyboardButton(
+                text="ᴄʜ ɪʏᴀɴ", url=f"https://t.me/bang_iyan"),
+            InlineKeyboardButton(
+                text="ᴏᴡɴᴇʀ ʙᴏᴛ", url=f"https://t.me/A_iyan"),
+        ],
+    ]
+    return buttons 
