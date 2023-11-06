@@ -8,7 +8,8 @@
 # All rights reserved.
 
 from pyrogram import filters
-from pyrogram.types import Message
+from pyrogram.enums import ChatMembersFilter
+from pyrogram.types import CallbackQuery, Message
 
 from config import BANNED_USERS
 from strings import get_command
@@ -59,7 +60,7 @@ async def playmode_(client, message: Message, _):
             return await message.reply_text(_["cplay_5"])
         try:
             admins = await app.get_chat_members(
-                chat.id, filter="administrators"
+                chat.id, filter=ChatMemberStatus.ADMINISTRATOR
             )
         except:
             return await message.reply_text(_["cplay_4"])
