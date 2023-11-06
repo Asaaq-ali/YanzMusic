@@ -329,15 +329,15 @@ def panel_markup_3(_, videoid, chat_id):
     buttons = [
         [
             InlineKeyboardButton(
-                text="ᴀʀᴇᴀ ɢᴀʙᴜᴛ", url=f"https://t.me/Areaa_Gabutt"),
+                text="ᴀʀᴇᴀ ɢᴀʙᴜᴛ", url=f"https://t.me/Mlze1bot"),
             InlineKeyboardButton(
-                text="ᴘᴜʙʟɪᴋ ᴠɪʀᴛᴜᴀʟ" url=f"https://t.me/Publik_Virtual"),
+                text="ᴘᴜʙʟɪᴋ ᴠɪʀᴛᴜᴀʟ", url=f"https://t.me/Mlze1bot"),
         ],
         [
             InlineKeyboardButton(
-                text="ᴄʜ ɪʏᴀɴ", url=f"https://t.me/bang_iyan"),
+                text="ᴄʜ ɪʏᴀɴ", url=f"https://t.me/Mlze1bot"),
             InlineKeyboardButton(
-                text="ᴏᴡɴᴇʀ ʙᴏᴛ", url=f"https://t.me/A_iyan"),
+                text="ᴏᴡɴᴇʀ ʙᴏᴛ", url=f"https://t.me/Mlze1bot"),
         ],
     ]
     return buttons 
