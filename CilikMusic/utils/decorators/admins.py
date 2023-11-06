@@ -7,7 +7,9 @@
 #
 # All rights reserved.
 
+from pyrogram.enums import ChatType
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
+
 
 from config import adminlist
 from strings import get_string
