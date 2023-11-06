@@ -38,7 +38,7 @@ async def reload_admin_cache(client, message: Message, _):
     try:
         chat_id = message.chat.id
         admins = await app.get_chat_members(
-            chat_id, filter=ChatMemberStatus.ADMINISTRATOR
+            chat_id, filter=ChatMembersFilter.ADMINISTRATOR
         )
         authusers = await get_authuser_names(chat_id)
         adminlist[chat_id] = []
