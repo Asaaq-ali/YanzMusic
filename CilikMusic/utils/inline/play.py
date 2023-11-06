@@ -89,6 +89,11 @@ def stream_markup(_, videoid, chat_id):
         ],
         [
             InlineKeyboardButton(
+                text=_["PL_B_01"], switch_inline_query_current_chat=""
+            )
+        ],
+        [
+            InlineKeyboardButton(
                 text=_["CLOSEMENU_BUTTON"], callback_data="close"
             )
         ],
