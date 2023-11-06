@@ -43,7 +43,7 @@ class CilikBot(Client):
             )
             sys.exit()
         a = await self.get_chat_member(config.LOG_GROUP_ID, self.id)
-        if a.status != "ADMINISTRATOR":
+        if a.status != ChatMemberStatus.ADMINISTRATOR:
             LOGGER(__name__).error(
                 "Silakan promosikan Bot sebagai Admin di Grup Logger"
             )
