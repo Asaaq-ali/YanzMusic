@@ -9,7 +9,9 @@
 
 import sys
 
-from pyrogram import Client
+from pyrogram import Client, errors
+from pyrogram.enums import ChatMemberStatus, ParseMode
+
 
 import config
 
@@ -41,7 +43,7 @@ class CilikBot(Client):
             )
             sys.exit()
         a = await self.get_chat_member(config.LOG_GROUP_ID, self.id)
-        if a.status != "administrator":
+        if a.status != "ADMINISTRATOR":
             LOGGER(__name__).error(
                 "Silakan promosikan Bot sebagai Admin di Grup Logger"
             )
