@@ -177,38 +177,6 @@ async def play_commnd(
                 return await mystic.edit_text(err)
             return await mystic.delete()
         return
-    elif url:
-        if await YouTube.exists(url):
-            if "playlist" in url:
-                try:
-                    details = await YouTube.playlist(
-                        url,
-                        config.PLAYLIST_FETCH_LIMIT,
-                        message.from_user.id,
-                    )
-                except Exception as e:
-                    print(e)
-                    return await mystic.edit_text(_["play_3"])
-                streamtype = "playlist"
-                plist_type = "yt"
-                if "&" in url:
-                    plist_id = (url.split("=")[1]).split("&")[0]
-                else:
-                    plist_id = url.split("=")[1]
-                img = config.PLAYLIST_IMG_URL
-                cap = _["play_10"]
-            else:
-                try:
-                    details, track_id = await YouTube.track(url)
-                except Exception as e:
-                    print(e)
-                    return await mystic.edit_text(_["play_3"])
-                streamtype = "youtube"
-                img = details["thumb"]
-                cap = _["play_11"].format(
-                    details["title"],
-                    details["duration_min"],
-                )
         elif await Spotify.valid(url):
             spotify = True
             if (
