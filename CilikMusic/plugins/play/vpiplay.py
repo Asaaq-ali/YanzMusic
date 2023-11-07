@@ -43,7 +43,6 @@ PLAY_COMMAND = get_command("PLAY_COMMAND")
 @app.on_message(
     filters.command(["شغلي","غني"],"")
     & filters.group
-    & filters.channel
     & ~BANNED_USERS
 )
 @PlayWrapper
