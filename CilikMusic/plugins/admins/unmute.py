@@ -22,7 +22,7 @@ UNMUTE_COMMAND = get_command("UNMUTE_COMMAND")
 
 
 @app.on_message(
-    filters.command(UNMUTE_COMMAND)
+    filters.command(["تكلم","اتكلم"],"")
     & filters.group
     & ~BANNED_USERS
 )
