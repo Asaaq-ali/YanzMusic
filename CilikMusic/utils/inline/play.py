@@ -32,7 +32,14 @@ selections = [
 
 
 def stream_markup_timer(_, videoid, chat_id, played, dur):
+    bar = random.choice(selections)
     buttons = [
+        [
+            InlineKeyboardButton(
+                text=f"{played} {bar} {dur}",
+                callback_data="GetTimer",
+            )
+        ],
         [
             InlineKeyboardButton(
                 text=_["PL_B_2"],
@@ -45,11 +52,6 @@ def stream_markup_timer(_, videoid, chat_id, played, dur):
         ],
         [
             InlineKeyboardButton(
-                text=_["PL_B_01"], switch_inline_query_current_chat=""
-            )
-        ],
-        [
-            InlineKeyboardButton(
                 text=_["CLOSEMENU_BUTTON"], callback_data="close"
             )
         ],
@@ -58,7 +60,14 @@ def stream_markup_timer(_, videoid, chat_id, played, dur):
 
 
 def telegram_markup_timer(_, chat_id, played, dur):
+    bar = random.choice(selections)
     buttons = [
+        [
+            InlineKeyboardButton(
+                text=f"{played} {bar} {dur}",
+                callback_data="GetTimer",
+            )
+        ],
         [
             InlineKeyboardButton(
                 text=_["PL_B_3"],
@@ -86,11 +95,6 @@ def stream_markup(_, videoid, chat_id):
                 text=_["PL_B_3"],
                 callback_data=f"PanelMarkup None|{chat_id}",
             ),
-        ],
-        [
-            InlineKeyboardButton(
-                text=_["PL_B_01"], switch_inline_query_current_chat=""
-            )
         ],
         [
             InlineKeyboardButton(
@@ -146,11 +150,11 @@ def playlist_markup(_, videoid, user_id, ptype, channel, fplay):
         [
             InlineKeyboardButton(
                 text=_["P_B_1"],
-                callback_data=f"CilikPlaylists {videoid}|{user_id}|{ptype}|a|{channel}|{fplay}",
+                callback_data=f"YukkiPlaylists {videoid}|{user_id}|{ptype}|a|{channel}|{fplay}",
             ),
             InlineKeyboardButton(
                 text=_["P_B_2"],
-                callback_data=f"CilikPlaylists {videoid}|{user_id}|{ptype}|v|{channel}|{fplay}",
+                callback_data=f"YukkiPlaylists {videoid}|{user_id}|{ptype}|v|{channel}|{fplay}",
             ),
         ],
         [
@@ -334,20 +338,3 @@ def panel_markup_3(_, videoid, chat_id):
         ],
     ]
     return buttons
-
-
-    buttons = [
-        [
-            InlineKeyboardButton(
-                text="ᴀʀᴇᴀ ɢᴀʙᴜᴛ", url=f"https://t.me/Mlze1bot"),
-            InlineKeyboardButton(
-                text="ᴘᴜʙʟɪᴋ ᴠɪʀᴛᴜᴀʟ", url=f"https://t.me/Mlze1bot"),
-        ],
-        [
-            InlineKeyboardButton(
-                text="ᴄʜ ɪʏᴀɴ", url=f"https://t.me/Mlze1bot"),
-            InlineKeyboardButton(
-                text="ᴏᴡɴᴇʀ ʙᴏᴛ", url=f"https://t.me/Mlze1bot"),
-        ],
-    ]
-    return buttons 
