@@ -322,7 +322,7 @@ async def aud_vid_cb(client, CallbackQuery, _):
 @ActualAdminCB
 async def playmode_ans(client, CallbackQuery, _):
     command = CallbackQuery.matches[0].group(1)
-    if command == "CHANNELMODECHANGE":
+    if command == "MODECHANGE":
         is_non_admin = await is_nonadmin_chat(
             CallbackQuery.message.chat.id
         )
@@ -343,7 +343,7 @@ async def playmode_ans(client, CallbackQuery, _):
         else:
             Playtype = True
         buttons = playmode_users_markup(_, Direct, Group, Playtype)
-    if command == "MODECHANGE":
+    if command == "CHANNELMODECHANGE":
         try:
             await CallbackQuery.answer(_["set_cb_6"], show_alert=True)
         except:
