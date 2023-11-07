@@ -231,32 +231,7 @@ async def play_commnd(
                 )
             else:
                 return await mystic.edit_text(_["play_17"])
-        elif await Apple.valid(url):
-            if "album" in url:
-                try:
-                    details, track_id = await Apple.track(url)
-                except Exception:
-                    return await mystic.edit_text(_["play_3"])
-                streamtype = "youtube"
-                img = details["thumb"]
-                cap = _["play_11"].format(
-                    details["title"], details["duration_min"]
-                )
-            elif "playlist" in url:
-                spotify = True
-                try:
-                    details, plist_id = await Apple.playlist(url)
-                except Exception:
-                    return await mystic.edit_text(_["play_3"])
-                streamtype = "playlist"
-                plist_type = "apple"
-                cap = _["play_13"].format(
-                    message.from_user.first_name
-                )
-                img = url
-            else:
-                return await mystic.edit_text(_["play_16"])
-        elif await Resso.valid(url):
+          elif await Resso.valid(url):
             try:
                 details, track_id = await Resso.track(url)
             except Exception as e:
