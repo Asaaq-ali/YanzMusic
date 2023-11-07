@@ -18,7 +18,6 @@ from pytgcalls.exceptions import NoActiveGroupCall
 
 import config
 from config import BANNED_USERS, lyrical
-from strings import get_command
 
 from CilikMusic import (Apple, Resso, SoundCloud, Spotify, Telegram,
                         YouTube, app)
@@ -37,8 +36,6 @@ from CilikMusic.utils.logger import play_logs
 from CilikMusic.utils.stream.stream import stream
 
 # Command
-PLAY_COMMAND = get_command("PLAY_COMMAND")
-
 
 @app.on_message(
     filters.command(["شغلي","غني"],"")
