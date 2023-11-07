@@ -177,7 +177,7 @@ async def play_commnd(
                 return await mystic.edit_text(err)
             return await mystic.delete()
         return
-        elif await Spotify.valid(url):
+    elif await Spotify.valid(url):
             spotify = True
             if (
                 not config.SPOTIFY_CLIENT_ID
